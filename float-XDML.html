@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      ul,
+      ol {
+        list-style: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      header {
+        /* border: 1px blue solid; */
+        background-color: gray;
+        color: white;
+      }
+
+      .logo {
+        float: left;
+        background-color: grey;
+        /* border: 1px solid red; */
+        display: inline-block;
+        margin-top: 4px;
+        margin-left: 10px;
+      }
+
+      .logo > img {
+        /* border: 1px solid green; */
+        /* width: 100px; */
+        height: 40px;
+        vertical-align: top; /* 去除logo下的多余灰色 */
+      }
+
+      .nav {
+        float: right;
+        margin-left: 20px;
+      }
+
+      ul {
+        /* margin-top: 2px; */
+        /* border: 1px red solid; */
+        display: inline-block;
+      }
+
+      ul > li {
+        /* border: 1px blue solid; */
+        float: left;
+        padding: 4px 0.5em;
+        line-height: 40px;
+      }
+
+      .content {
+        /* outline: 1px solid red; */
+        width: 800px;
+        /* margin: 0 auto; */
+        /* 如果父元素为固定width，可使用margin: 0 auto;使之水平居中 */
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        /* display: inline-block; */
+      }
+
+      .content > aside {
+        float: left;
+        /* border: 1px solid blue; */
+        width: 200px;
+        height: 300px; /* 平常不要给height */
+        background-color: #666;
+      }
+
+      .content > main {
+        float: left;
+        /* border: 1px solid green; */
+        width: 500px;
+        height: 300px;
+        background-color: #999;
+      }
+
+      .content > .ad {
+        float: left;
+        /* border: 1px solid purple; */
+        width: 100px;
+        height: 300px;
+        background-color: #aaa;
+      }
+
+      .imageList {
+        outline: 1px solid red;
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+      }
+
+      .imageList > .x > .image {
+        width: 191px;
+        height: 191px;
+        background-color: #ddd;
+        border: 50px solid blue;
+        float: left;
+        margin-right: 12px;
+        margin-bottom: 12px;
+      }
+
+      .imageList > .x {
+        /* border: 1px black solid; */
+        margin-right: -12px;
+        margin-bottom: -12px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 双栏布局 -->
+    <header class="clearfix">
+      <div class="logo">
+        <img src="./images/logo.png" alt="logo" />
+      </div>
+      <ul class="clearfix nav">
+        <li>首页</li>
+        <li>课程</li>
+        <li>优惠</li>
+        <li>关于</li>
+      </ul>
+    </header>
+    <!-- 三栏布局 -->
+    <div class="content clearfix">
+      <aside>一行有六个字</aside>
+      <main></main>
+      <div class="ad"></div>
+    </div>
+    <!-- 平均布局 -->
+    <div class="imageList">
+      <div class="x clearfix">
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+      </div>
+    </div>
+  </body>
+</html>
